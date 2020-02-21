@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class Main {
 	public static void main(String[] args) {
-		Path path = Paths.get("C:\\Users\\PC\\Desktop\\20200104_143806.jpg");
+		Path path = Paths.get("C:\\Users\\PC\\Desktop\\poza.jpg");
 		DataHandler data = new DataHandler(path);
 		data.printMetadata();
 		try {

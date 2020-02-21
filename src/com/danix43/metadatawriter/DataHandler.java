@@ -16,6 +16,12 @@ import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
 
+/**
+ * TODO: - Project stalled because the library used in reading metadata doesn't
+ * support writing - Look up for alternatives or put on the vault
+ * 
+ * @author Danix43 <daninitu39@gmail.com>
+ */
 public class DataHandler {
 
 	private static final Logger LOGGER = Logger.getLogger(DataHandler.class.getName());
@@ -64,10 +70,10 @@ public class DataHandler {
 				}
 			}
 		} catch (IOException e) {
-			LOGGER.warning(() -> e.getMessage());
+			LOGGER.warning(e::getMessage);
 		}
 	}
-	
+
 	private String getFileExtension(File file) {
 		String name = file.getName();
 		if (name.lastIndexOf('.') != -1 && name.lastIndexOf('.') != 0) {
